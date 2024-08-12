@@ -118,8 +118,3 @@
 - **Códigos de estado HTTP:**
   - `204 No Content` - Solicitud exitosa. El jugador ha sido eliminado.
   - `404 Not Found` - No se encontró un jugador con el ID especificado.
-- **Respuesta:**
-  - **Cuerpo de la respuesta:** Ninguno (sin contenido). La solicitud se considera exitosa si el estado es `204 No Content`.
-
-```json
-// No hay cuerpo de respuesta
