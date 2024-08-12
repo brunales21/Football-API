@@ -34,5 +34,21 @@ public class PlayerController {
         return ResponseEntity.ok(playerFacade.save(playerData));
     }
 
+    @PutMapping("/players/{id}")
+    public ResponseEntity<PlayerData> updatePlayer(@PathVariable Long id, @RequestBody PlayerData playerData) {
+        if (playerFacade.findById(id).isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        playerData.setId(id);
+        return ResponseEntity.ok(playerFacade.save(playerData));
+    }
 
+    @DeleteMapping("/players/{id}")
+    public ResponseEntity<Void> deletePlayer(@PathVariable Long id) {
+        if (playerFacade.findById(id).isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        playerFacade.deleteById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
