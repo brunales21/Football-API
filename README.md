@@ -29,7 +29,7 @@
         "team": "Team B"
     }
 ]
-
+```
 
 ### 2. Obtener un jugador por ID
 
@@ -53,7 +53,7 @@
     "team": "Team A"
 }
 
-
+```
 ### 3. Crear un nuevo jugador
 
 - **URL:** `/players`
@@ -77,7 +77,7 @@
     "position": "Defender",
     "team": "Team C"
 }
-
+```
 
 ### 4. Actualizar un jugador existente
 
@@ -105,7 +105,7 @@
     "position": "Midfielder",
     "team": "Updated Team"
 }
-
+```
 
 ### 5. Eliminar un jugador
 
