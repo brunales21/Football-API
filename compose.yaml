@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  java_app:
+    container_name: java_app
+    image: java-app:1.0.0
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_URL=jdbc:mysql://java_db:3306/football
+      - DATABASE_USERNAME=brunales
+      - DATABASE_PASSWORD=brunales
+    depends_on:
+      - java_db
+  java_db:
+    container_name: java_db
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: football
+      MYSQL_USER: brunales
+      MYSQL_PASSWORD: brunales
